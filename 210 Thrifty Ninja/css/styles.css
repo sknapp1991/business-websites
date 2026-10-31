@@ -23,12 +23,12 @@ html, body {
   padding: 0;
   background: var(--bg);
   color: var(--text);
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: 'Hanken Grotesk', system-ui, -apple-system, sans-serif;
   scroll-behavior: smooth;
 }
 
 h1, h2, h3, .brand-text {
-  font-family: 'Bebas Neue', 'Inter', sans-serif;
+  font-family: 'Bebas Neue', 'Hanken Grotesk', sans-serif;
   letter-spacing: 0.02em;
   line-height: 1.05;
   margin: 0;
@@ -175,15 +175,6 @@ img { max-width: 100%; display: block; }
   width: 100%;
   max-width: 340px;
   transform: rotate(-4deg);
-}
-
-.hero-kicker {
-  text-transform: uppercase;
-  color: var(--text-dim);
-  font-weight: 700;
-  font-size: 0.8rem;
-  letter-spacing: 0.12em;
-  margin-bottom: 14px;
 }
 
 .hero h1 {
@@ -391,7 +382,7 @@ img { max-width: 100%; display: block; }
   margin-bottom: 14px;
 }
 
-.howto-card h3 { font-size: 1.05rem; margin-bottom: 8px; font-family: 'Inter', sans-serif; }
+.howto-card h3 { font-size: 1.05rem; margin-bottom: 8px; font-family: 'Hanken Grotesk', sans-serif; }
 .howto-card p { color: var(--text-dim); font-size: 0.9rem; line-height: 1.55; margin: 0; }
 
 .howto-note {
