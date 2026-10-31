@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>210 Thrifty Ninja | Thrifted Finds, San Antonio TX</title>
+<meta name="description" content="210 Thrifty Ninja — curated secondhand clothing, knickknacks, and everyday favorites. San Antonio, TX. Pay easy with Venmo or Cash App.">
+<link rel="icon" href="assets/images/logo/logo.png?v=3" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="#top" class="brand">
+      <img src="assets/images/logo/logo.png?v=3" alt="210 Thrifty Ninja logo" class="brand-logo" onerror="this.style.display='none'">
+      <span class="brand-text"><span class="accent-yellow">210</span> <span class="accent">THRIFTY</span><span class="accent-teal">NINJA</span></span>
+    </a>
+    <nav class="main-nav">
+      <a href="#shop">Shop</a>
+      <a href="#how-to-buy">How to Buy</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a href="https://www.vinted.com/member/3185857700-210thriftyninja" target="_blank" rel="noopener">Full Catalog &#8599;</a>
+    </nav>
+    <a href="#shop" class="btn btn-accent nav-cta">Shop Now</a>
+  </div>
+</header>
+
+<section id="top" class="hero">
+  <div class="hero-inner">
+    <div class="hero-text">
+      <p class="hero-kicker">San Antonio, TX &middot; 210 Area</p>
+      <h1><span class="accent-yellow">Strike fast.</span> <span class="accent">Dress sharp.</span><br><span class="accent-teal">Pay less.</span></h1>
+      <p class="hero-sub">I strike fast with incredible deals on great clothing, fun knickknacks, and everyday favorites. Every piece is secondhand, hand-picked, and priced to move.</p>
+      <div class="hero-actions">
+        <a href="#shop" class="btn btn-accent">Shop the Drop</a>
+        <a href="#how-to-buy" class="btn btn-ghost">How Buying Works</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <img src="assets/images/logo/logo.png?v=3" alt="210 Thrifty Ninja" class="hero-logo">
+    </div>
+  </div>
+</section>
+
+<section id="shop" class="shop-section">
+  <div class="section-inner">
+    <h2 class="section-title"><span class="accent-yellow">Latest</span> <span class="accent">Drops</span></h2>
+    <p class="section-sub">New items added regularly. First come, first served — once it's gone, it's gone.</p>
+
+    <div class="filter-bar">
+      <div class="dropdown" id="category-dropdown">
+        <button class="dropdown-trigger" id="category-trigger">
+          Category: <span id="category-label">All</span>
+          <svg class="caret" width="10" height="6" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="dropdown-panel" id="category-panel">
+          <button class="dropdown-option active" data-value="All">All <span class="opt-count" data-count="All"></span></button>
+          <button class="dropdown-option" data-value="Women's">Women's <span class="opt-count" data-count="Women's"></span></button>
+          <button class="dropdown-option" data-value="Men's">Men's <span class="opt-count" data-count="Men's"></span></button>
+          <button class="dropdown-option" data-value="Kids">Kids <span class="opt-count" data-count="Kids"></span></button>
+          <button class="dropdown-option" data-value="Electronics">Electronics <span class="opt-count" data-count="Electronics"></span></button>
+          <button class="dropdown-option" data-value="Books & Media">Books &amp; Media <span class="opt-count" data-count="Books & Media"></span></button>
+          <button class="dropdown-option" data-value="Hobbies & Collectibles">Hobbies &amp; Collectibles <span class="opt-count" data-count="Hobbies & Collectibles"></span></button>
+        </div>
+      </div>
+
+      <div class="dropdown" id="sort-dropdown">
+        <button class="dropdown-trigger" id="sort-trigger">
+          Sort by: <span id="sort-label">Relevance</span>
+          <svg class="caret" width="10" height="6" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="dropdown-panel" id="sort-panel">
+          <button class="dropdown-option active" data-value="relevance">Relevance</button>
+          <button class="dropdown-option" data-value="price-desc">Price: High to Low</button>
+          <button class="dropdown-option" data-value="price-asc">Price: Low to High</button>
+          <button class="dropdown-option" data-value="newest">Newest First</button>
+        </div>
+      </div>
+    </div>
+    <p id="filter-count" class="filter-count"></p>
+
+    <div id="product-grid" class="product-grid"><!-- populated by js/script.js --></div>
+  </div>
+</section>
+
+<section id="how-to-buy" class="howto-section">
+  <div class="section-inner">
+    <h2 class="section-title">How <span class="accent">Buying</span> Works</h2>
+    <div class="howto-grid">
+      <div class="howto-card">
+        <span class="howto-num">1</span>
+        <h3>Pick your item</h3>
+        <p>Browse the shop above and find something you love. Items are first-come, first-served.</p>
+      </div>
+      <div class="howto-card">
+        <span class="howto-num">2</span>
+        <h3>Tap Buy</h3>
+        <p>Click the Venmo or Cash App button on the item — it opens a payment request already filled in with the item name and price.</p>
+      </div>
+      <div class="howto-card">
+        <span class="howto-num">3</span>
+        <h3>Send payment + your address</h3>
+        <p>Send the payment, then message with your shipping address (or drop it in the Venmo/Cash App note).</p>
+      </div>
+      <div class="howto-card">
+        <span class="howto-num">4</span>
+        <h3>It ships</h3>
+        <p>Items ship within a few days of payment. You'll get a message when it's on the way.</p>
+      </div>
+    </div>
+    <p class="howto-note">Prefer not to use Venmo or Cash App? Use the <a href="#contact">Message</a> button on any item and we'll figure out another way.</p>
+  </div>
+</section>
+
+<section id="about" class="about-section">
+  <div class="section-inner about-inner">
+    <div class="about-text">
+      <h2 class="section-title"><span class="accent">About</span> the Shop</h2>
+      <p>210 Thrifty Ninja strikes fast with incredible deals on great clothing, fun knickknacks, and everyday favorites — all sourced, sorted, and sold out of San Antonio, TX.</p>
+      <p>Been doing this a while on Vinted with <strong>13+ reviews</strong> — this site is the new home base, with more items, easier buying, and more drops coming.</p>
+      <a href="https://www.vinted.com/member/3185857700-210thriftyninja" target="_blank" rel="noopener" class="btn btn-ghost">See Reviews on Vinted</a>
+    </div>
+  </div>
+</section>
+
+<footer id="contact" class="site-footer">
+  <div class="section-inner footer-inner">
+    <div>
+      <p class="brand-text footer-brand"><span class="accent-yellow">210</span> <span class="accent">THRIFTY</span><span class="accent-teal">NINJA</span></p>
+      <p class="footer-sub">San Antonio, TX</p>
+    </div>
+    <div class="footer-links">
+      <a href="mailto:Aloveee77@icloud.com">Aloveee77@icloud.com</a>
+      <a href="https://venmo.com/u/Ashley-Lovee-7" target="_blank" rel="noopener">Venmo: @Ashley-Lovee-7</a>
+      <a href="https://cash.app/$AshleyLovee77" target="_blank" rel="noopener">Cash App: $AshleyLovee77</a>
+      <a href="https://www.vinted.com/member/3185857700-210thriftyninja" target="_blank" rel="noopener">Vinted Profile</a>
+    </div>
+  </div>
+  <p class="footer-copy">&copy; <span id="year"></span> 210 Thrifty Ninja. All items secondhand &amp; sold as-is.</p>
+</footer>
+
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore-compat.js"></script>
+<script src="js/firebase-config.js?v=2"></script>
+<script src="js/products-data.js?v=2"></script>
+<script src="js/script.js?v=2"></script>
+<script src="js/sold-sync.js?v=2"></script>
+<script src="js/products-sync.js?v=1"></script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Seller Admin | 210 Thrifty Ninja</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="assets/images/logo/logo.png?v=3" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/admin.css">
+</head>
+<body class="admin-body">
+
+<div id="login-screen" class="admin-login">
+  <h1><span class="accent-yellow">210</span> <span class="accent">THRIFTY</span><span class="accent-teal">NINJA</span></h1>
+  <p class="admin-sub">Seller Admin — log in to mark items sold</p>
+  <form id="login-form">
+    <input type="email" id="login-email" placeholder="Email" autocomplete="username" required>
+    <input type="password" id="login-password" placeholder="Password" autocomplete="current-password" required>
+    <button type="submit" class="btn btn-accent btn-block">Log In</button>
+    <p id="login-error" class="admin-error"></p>
+  </form>
+</div>
+
+<div id="admin-screen" class="admin-panel" hidden>
+  <div class="admin-header">
+    <h1><span class="accent-yellow">210</span> <span class="accent">THRIFTY</span><span class="accent-teal">NINJA</span> <span class="admin-tag">Admin</span></h1>
+    <button id="logout-btn" class="btn btn-ghost btn-sm">Log Out</button>
+  </div>
+
+  <div class="admin-tabs">
+    <button class="admin-tab-btn active" data-tab="inventory">Inventory</button>
+    <button class="admin-tab-btn" data-tab="add">Add Listing</button>
+    <button class="admin-tab-btn" data-tab="history">Sales History</button>
+  </div>
+
+  <div id="tab-inventory" class="admin-tab-panel">
+    <input type="text" id="admin-search" class="admin-search" placeholder="Search items by name, brand, or #tag...">
+    <p id="admin-count" class="admin-count"></p>
+    <div id="admin-list" class="admin-list"><!-- populated by js/admin.js --></div>
+  </div>
+
+  <div id="tab-add" class="admin-tab-panel" hidden>
+    <form id="add-listing-form" class="admin-form">
+      <label>Item Name
+        <input type="text" id="new-name" required>
+      </label>
+      <label>Price ($)
+        <input type="number" id="new-price" min="0" step="1" required>
+      </label>
+      <label>Brand
+        <input type="text" id="new-brand">
+      </label>
+      <label>Size
+        <input type="text" id="new-size">
+      </label>
+      <label>Condition
+        <input type="text" id="new-condition" placeholder="e.g. Very good">
+      </label>
+      <label>Category
+        <select id="new-category">
+          <option value="Women's">Women's</option>
+          <option value="Men's">Men's</option>
+          <option value="Kids">Kids</option>
+          <option value="Electronics">Electronics</option>
+          <option value="Books & Media">Books &amp; Media</option>
+          <option value="Hobbies & Collectibles">Hobbies &amp; Collectibles</option>
+        </select>
+      </label>
+      <label>Description
+        <textarea id="new-description" rows="2"></textarea>
+      </label>
+      <label>Photo Link
+        <input type="url" id="new-image" placeholder="Paste an image link (e.g. from imgur.com)">
+      </label>
+      <p class="admin-hint">No account needed — open <a href="https://imgur.com" target="_blank" rel="noopener">imgur.com</a>, drag your photo in, then copy the image link it gives you and paste it above.</p>
+      <label>Tag # <span class="admin-optional">(optional)</span>
+        <input type="text" id="new-tag" placeholder="e.g. 350">
+      </label>
+      <button type="submit" class="btn btn-accent btn-block">Add to Shop</button>
+      <p id="add-listing-status" class="admin-error"></p>
+    </form>
+  </div>
+
+  <div id="tab-history" class="admin-tab-panel" hidden>
+    <input type="text" id="history-search" class="admin-search" placeholder="Search past sales...">
+    <p id="history-count" class="admin-count"></p>
+    <div id="history-list" class="admin-list"><!-- populated by js/admin.js --></div>
+  </div>
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore-compat.js"></script>
+<script src="js/firebase-config.js?v=2"></script>
+<script src="js/products-data.js?v=2"></script>
+<script src="js/products-sync.js?v=1"></script>
+<script src="js/admin.js?v=3"></script>
+</body>
+</html>
